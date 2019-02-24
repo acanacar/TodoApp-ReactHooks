@@ -1,14 +1,17 @@
 .app {
-    background: #209cee;
+    background: #719c4f;
     padding: 30px;
     height: 100vh;
+    text-align: center;
+    font-family: sans-serif;
 }
 
 .todo-list {
-    background: #e8e8e8;
+    background: transparent;
     border-radius: 4px;
     padding: 5px;
     max-width: 400px;
+    margin: auto;
 }
 
 .todo {
@@ -23,6 +26,10 @@
     justify-content: space-between;
 }
 
+.todo .button{
+    margin: 0 5px;
+    padding: 3px;
+}
 .input {
     width: 100%;
     box-sizing: border-box;
@@ -31,4 +38,10 @@
     box-shadow: none;
     padding: 1rem;
     height: 2.25em;
+}
+
+.add-todo {
+    width: 400px;
+    margin: auto;
+    padding: 20px 0 40px 0;
 }

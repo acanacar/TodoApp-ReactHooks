@@ -9,8 +9,8 @@ function Todo({ todo, index, completeTodo,removeTodo }) {
     >
       {todo.text}
       <div>
-        <button onClick={() => completeTodo(index)}>Completed</button>
-        <button onClick={() => removeTodo(index)}>Remove</button>
+        <button className={'button'} onClick={() => completeTodo(index)}>Completed</button>
+        <button className={'button'} onClick={() => removeTodo(index)}>Remove</button>
       </div>
     </div>
 
@@ -62,10 +62,14 @@ function App() {
   }
   return (
     <div className={'app'}>
+      <div className={'add-todo'}>
+        <h1>Add Todos</h1>
+        <TodoForm addTodo={addTodo} />
+      </div>
       <div className={'todo-list'}>
+        <h1 style={{textDecoration:'underline'}}>Todos</h1>
         {todos.map((todo, index) => (
           <Todo key={index} index={index} todo={todo} completeTodo={completeTodo} removeTodo={removeTodo} />))}
-        <TodoForm addTodo={addTodo} />
       </div>
     </div>
   )
